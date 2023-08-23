@@ -1,0 +1,524 @@
+/* =====================================
+        #Common CSS 
+ =======================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,500&display=swap');
+
+:root {
+    --main-font: 'IBM Plex Sans', sans-serif;
+    --main-color: #027FEE;
+    --second-color: rgba(10, 10, 10, 0.12);
+}
+
+* {
+    font-family: var(--main-font);
+    color: #000;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+}
+
+p {
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+select {
+    appearance: none;
+}
+
+.select-tag-parent {
+    position: relative;
+}
+
+.select-tag-parent::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    content: "\f107";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    right: 15px;
+    color: #B5B5B5;
+}
+
+@media screen and (max-width: 576px) {
+    .select-tag-parent::after {
+        font-size: 16px;
+    }
+}
+
+/* =====================================
+        #Form Design
+ =======================================*/
+
+#bb-form-main-parents {
+    width: 400px;
+    max-width: calc(100% - 20px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 25px 20px;
+    border-radius: 2px;
+}
+
+#bb-form-main-parents .bb-submit-btn,
+#bb-form-main-parents .bb-input-parent select,
+#bb-form-main-parents .bb-input-parent input {
+    display: block;
+    width: 100%;
+    height: 55px;
+    padding: 17px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--second-color);
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--main-font);
+    color: #C0C0C0;
+    margin-top: 8px;
+}
+
+#bb-form-main-parents .bb-submit-btn {
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+#bb-form-main-parents .bb-input-parent {
+    margin-top: 25px;
+}
+
+#bb-form-main-parents .bb-input-parent label {
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 2px;
+}
+
+#bb-form-main-parents .bb-create-account {
+    display: block;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #B5B5B5;
+    text-align: center;
+    position: relative;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+#bb-form-main-parents .bb-create-account::after,
+#bb-form-main-parents .bb-create-account::before {
+    width: 17px;
+    height: 2px;
+    background: #B5B5B5;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -25px;
+}
+
+#bb-form-main-parents .bb-create-account::after {
+    left: unset;
+    right: -25px;
+}
+
+#bb-form-main-parents .bb-input-password {
+    position: relative;
+}
+
+#bb-form-main-parents .bb-input-password .fa-solid {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    cursor: pointer;
+    color: #B5B5B5;
+}
+
+#bb-form-main-parents .bb-enter-tiktok input {
+    padding-left: 80px;
+    font-weight: 500;
+}
+
+#bb-form-main-parents .bb-enter-tiktok {
+    position: relative;
+}
+
+#bb-form-main-parents .bb-enter-tiktok .bb-enter-tiktok-btn {
+    border: unset;
+    outline: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30px;
+}
+
+#bb-form-main-parents .bb-enter-tiktok .bb-enter-tiktok-btn img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+#bb-form-main-parents .bb-two-input-parent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#bb-form-main-parents .bb-two-input-parent input {
+    width: calc(50% - 4px);
+}
+
+#bb-form-main-parents .iti {
+    display: block !important;
+    margin-top: 8px !important;
+}
+
+#bb-form-main-parents .iti--allow-dropdown input {
+    padding-left: 72px !important;
+}
+
+#bb-form-main-parents input[type=checkbox] {
+    position: relative;
+    border: 2px solid var(--main-color);
+    border-radius: 2px;
+    background: none;
+    cursor: pointer;
+    line-height: 0;
+    margin: 0 .6em 0 0;
+    outline: 0;
+    padding: 0 !important;
+    vertical-align: text-top;
+    height: 20px;
+    width: 20px;
+    -webkit-appearance: none;
+    opacity: .5;
+}
+
+#bb-form-main-parents input[type=checkbox]:hover {
+    opacity: 1;
+}
+
+#bb-form-main-parents input[type=checkbox]:checked {
+    background-color: var(--main-color);
+    opacity: 1;
+}
+
+#bb-form-main-parents input[type=checkbox]:before {
+    content: '';
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 4px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    margin: -1px -1px 0 -1px;
+    transform: rotate(45deg) translate(-50%, -50%);
+    z-index: 2;
+}
+
+#bb-form-main-parents .comment-form-cookies-consent label {
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 17px;
+    color: #000000;
+}
+
+#bb-form-main-parents .comment-form-cookies-consent label a {
+    color: var(--main-color);
+}
+
+#bb-form-main-parents .comment-form-cookies-consent {
+    margin-top: 25px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+/* =====================================
+        #User 
+ =======================================*/
+
+#bb-user-fram {
+    width: 337px;
+    max-width: calc(100% - 20px);
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    padding: 35px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#bb-user-fram .bb-user-fram-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#bb-user-fram .bb-user-fram-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#bb-user-fram .bb-user-fram-name {
+    font-family: var(--main-color);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: #027FEE;
+    margin-top: 16px;
+}
+
+.bb-user-fram-followers {
+    display: flex;
+    margin-top: 19px;
+    align-items: center;
+    justify-content: center;
+}
+
+.bb-user-fram-followers li {
+    padding: 0 15px;
+}
+
+.bb-user-fram-followers li h3 {
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: #000000;
+}
+
+.bb-user-fram-followers li span {
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #000000;
+    display: block;
+}
+
+.bb-user-fram-followers li {
+    border-right: 2px solid rgba(0, 0, 0, 0.09);
+}
+
+.bb-user-fram-followers li:last-child {
+    border-right: unset;
+}
+
+.bb-enter-tiktok-btn {
+    background: #000;
+    padding: 6px 8px;
+    border-radius: 4px;
+}
+
+.bb-enter-tiktok-btn i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.iti--allow-dropdown .iti__flag-container {
+    left: 15px;
+}
+
+.bb-forgot-password-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bb-forgot-password-link a {
+    color: #027FEE;
+}
+
+
+/* =====================================
+        #New update pages
+        #Account Page
+ =======================================*/
+
+#bb-new-account-page-parent {
+    width: 375px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #FAFAFA;
+    padding: 20px 17px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.bb-new-account-page-top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bb-new-account-page-top-header .bb-new-account-page-logo {
+    width: 140px;
+    height: 23px;
+    display: block;
+}
+
+.bb-new-account-page-top-header .bb-new-account-page-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.bb-new-account-page-top-header button {
+    background: transparent;
+    outline: unset;
+    border: unset;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--main-font);
+}
+
+.bb-new-account-page-top-header button i {
+    margin-left: 7px;
+}
+
+.bb-new-account-page-welcome-user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.bb-new-account-page-welcome-user h2 {
+    font-weight: 700;
+    font-family: var(--main-font);
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.bb-new-account-page-welcome-user .bb-new-account-page-add-user {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin-right: 30px;
+}
+
+.bb-new-account-page-welcome-user .bb-new-account-page-add-user img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.bb-new-account-page-balance-parent {
+    background: #FFFFFF;
+    border: 1px solid #F5F5F5;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 11px 24px;
+    margin-top: 24px;
+}
+
+.bb-new-account-page-balance-parent .bb-new-account-page-balance-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    font-family: var(--main-font);
+}
+
+.bb-new-account-page-balance-parent .bb-new-account-page-balance-amount {
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+}
+
+.bb-new-account-page-withdraw-threshold {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
